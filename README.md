@@ -7,16 +7,15 @@ This repository is purely for educational purposes.
 The goal is to recreate the same project in different languages in order to become more familiar with said languages. 
 
 ## Important Notes
-- Unless specified otherwise, important variables will be hardcoded for simplicity. Some projects will have default values. 
-- Each project should be recreated with the same functionality as described in the project's description. Due to the different behaviors some languages might have, this rule can be stretched a little if the changes are commented in the code, i.e. filtering images by extension instead of trying to open the file as an image.
+- Projects may use (and share) a configuration file to allow more customization.
 - There will be a list of steps to achieve the desired functionality in each project's description.
 - Some projects may not be cross-platform, meaning they will only work on Linux or Windows. The projects are *not* made with Mac OS support in mind.
-- Projects *can* depend on external libraries/frameworks to achieve the desired functionality. The goal is to understand more about the languages, not to code everything from scratch. However, the dependencies *must* be stated as a comment in the language's project.
+- Projects *can* depend on external libraries/frameworks to achieve the desired functionality. The goal is to understand more about the languages, not to code everything from scratch.
 
 ## Project List
 ---
 ### Portrait Mode
-Move all images in portrait mode from a directory to another. 
+Move or copy all images in portrait mode from a directory to another. 
 
 This project aims for speed and simplicity. We *only* need the image's dimension. If its width and height can be read without opening/loading the entire image, then do so.
 
@@ -26,14 +25,17 @@ Files with the same name in the output directory will be overwritten.
 
 **Defaults**  
 The default base directory is: 
-`/home/<user>/Pictures/Wallpapers` on **Linux**.
+- **Linux**: `/home/<user>/Pictures/Wallpapers`
+- **Windows**: `C:\Users\<user>\Pictures\Wallpapers`
 
-The output directory is named **Portrait** and it should be located inside the base directory. This directory will be created if it doesn't exist.
+The default output directory is named **Portrait** and it will be located inside the base directory. In other words, the default output directory is `"{base_directory}/Portrait"`. 
 
-**Main Steps**  
-1. Get/define the image's directory.
-2. Set the output directory and create it if needed. It should be called **Portrait** and *must* reside inside the base directory.
-3. Iterate over the contents of the base directory.
-4. Load the files as images
-5. Check the image's dimensions. The height *must* be greater than the width for an image to be in portrait mode.
-6. Move the images to the output directory.
+The directory will be created, if needed. Otherwise, the program will simply use the existing directory.
+
+**Configuration**  
+The configuration file is called `config.json` and has the following settings:
+- `image_directory` (string): The directory containing all the images.
+- `output_directory` (string): The directory where files will be moved/copied to.
+- `move_images` (boolean): Whether to move (true) or copy (false) images.
+
+**Note**: Avoid using tilde or environment variables, i.e. `~` or `$HOME` instead of `/home/<user>`. The former may be not interpreted correctly. 

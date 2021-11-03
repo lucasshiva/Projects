@@ -4,6 +4,9 @@ extern crate image;
 use image::image_dimensions;
 use std::fs;
 
+// NOTE!
+// This project does NOT use the configuration file yet.
+
 fn main() -> std::io::Result<()> {
     let home_dir = dirs::home_dir().unwrap();
     let image_dir = home_dir.join("Pictures").join("Wallpapers");
