@@ -1,1 +1,6 @@
+# Python
 **/.mypy_cache
+
+# Rust
+**/rust/Cargo.lock
+**/rust/target/
