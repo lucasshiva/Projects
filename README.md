@@ -28,7 +28,7 @@ The default base directory is:
 - **Linux**: `/home/<user>/Pictures/Wallpapers`
 - **Windows**: `C:\Users\<user>\Pictures\Wallpapers`
 
-The default output directory is named **Portrait** and it will be located inside the base directory. In other words, the default output directory is `"{base_directory}/Portrait"`. 
+The default output directory is named **Portrait** and it will be located inside the image directory. In other words, the default output directory is `"{image_directory}/Portrait"`. 
 
 The directory will be created, if needed. Otherwise, the program will simply use the existing directory.
 
@@ -36,6 +36,6 @@ The directory will be created, if needed. Otherwise, the program will simply use
 The configuration file is called `config.json` and has the following settings:
 - `image_directory` (string): The directory containing all the images.
 - `output_directory` (string): The directory where files will be moved/copied to.
-- `move_images` (boolean): Whether to move (true) or copy (false) images.
+- `move_images` (boolean): Whether to move (**true**) or copy (**false**) images.
 
 **Note**: Avoid using tilde or environment variables, i.e. `~` or `$HOME` instead of `/home/<user>`. The former may be not interpreted correctly. 
