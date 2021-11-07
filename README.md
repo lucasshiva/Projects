@@ -1,6 +1,14 @@
 # Projects
 This repository is a compilation of small/medium projects made in different programming languages. 
 
+## Table of Contents
+- [Projects](#projects)
+  - [Table of Contents](#table-of-contents)
+  - [Why?](#why)
+  - [Important Notes](#important-notes)
+  - [Project List](#project-list)
+    - [Portrait Mode](#portrait-mode)
+
 ## Why?
 This repository is purely for educational purposes.
 
@@ -13,7 +21,7 @@ The goal is to recreate the same project in different languages in order to beco
 - Projects *can* depend on external libraries/frameworks to achieve the desired functionality. The goal is to understand more about the languages, not to code everything from scratch.
 
 ## Project List
----
+
 ### Portrait Mode
 Move or copy all images in portrait mode from a directory to another. 
 
