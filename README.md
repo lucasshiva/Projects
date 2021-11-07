@@ -16,7 +16,6 @@ The goal is to recreate the same project in different languages in order to beco
 
 ## Important Notes
 - Projects may use (and share) a configuration file to allow more customization.
-- There will be a list of steps to achieve the desired functionality in each project's description.
 - Some projects may not be cross-platform, meaning they will only work on Linux or Windows. The projects are *not* made with Mac OS support in mind.
 - Projects *can* depend on external libraries/frameworks to achieve the desired functionality. The goal is to understand more about the languages, not to code everything from scratch.
 
@@ -47,3 +46,7 @@ The configuration file is called `config.json` and has the following settings:
 - `move_images` (boolean): Whether to move (**true**) or copy (**false**) images.
 
 **Note**: Avoid using tilde or environment variables, i.e. `~` or `$HOME` instead of `/home/<user>`. The former may be not interpreted correctly. 
+
+ **Languages**
+ - [Python](01-Portrait-Mode/python/portrait.py)
+ - [Rust](01-Portrait-Mode/rust/src/main.rs) - No config
